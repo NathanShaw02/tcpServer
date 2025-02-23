@@ -90,7 +90,7 @@ int main(){
             cout<<"Client disconnected"<<endl;
         }
         //display message
-        cout<<"Recieved: "<<string(buf,0,bytesRecv)<<endl;
+        cout<<"Recieved: "<<string(buf,0,bytesRecv)<<endl; // the string is printed by: using the character buffers "buf"'s data, start at index 0, iterate "bytesRecv" number of times to build string. string constructor :D
         //resend message
         send(clientSocket,buf,bytesRecv+1,0);
         //
